@@ -3,19 +3,33 @@
  * @var \Phalcon\Mvc\View\Engine\Php $this
  */
 ?>
-
+<br><br>
 <div class="page-header">
-    <h1>
+
+    <div class="container">
+      <center>
+      <h1 class="display-4"><img src="https://image.flaticon.com/icons/svg/109/109859.svg" class="img-fluid" alt="Responsive image" width="80"> &nbsp; <strong>ค้นหากิจกรรมนักศึกษา</strong></h1>
+      <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+    </center>
+    </div>
+
+    <!-- <h1>
         Search activity
     </h1>
     <p>
-        <?php echo $this->tag->linkTo(["activity/new", "Create activity"]) ?>
-    </p>
+        <!<?php echo $this->tag->linkTo(["activity/new", "Create activity"]) ?>
+    </p> -->
 </div>
 
+<br>
 <?php echo $this->getContent() ?>
-
+<br>
+<div class="container">
+  <center>
+<hr>
+        <br><br>
 <?php
+
     echo $this->tag->form(
         [
             "activity/search",
@@ -24,47 +38,68 @@
         ]
     );
 ?>
-
+<center>
 <div class="form-group">
-    <label for="fieldActivityid" class="col-sm-2 control-label">Activityid</label>
-    <div class="col-sm-10">
-        <?php echo $this->tag->textField(["activityid", "type" => "number", "class" => "form-control", "id" => "fieldActivityid"]) ?>
+    <!-- <label for="fieldActivityid" class="col-sm-2 control-label">Activityid</label> -->
+    <div class="col-sm-6">
+      <span class="input-group-btn">
+        <button class="btn btn-info active" type="button"> รหัสกิจกรรม </button>
+        <?php echo $this->tag->textField(["activityid","size" => 50, "type" => "number", "class" => "form-control", "id" => "fieldActivityid"]) ?>
+      </span>
     </div>
 </div>
 
 <div class="form-group">
-    <label for="fieldActivityname" class="col-sm-2 control-label">Activityname</label>
-    <div class="col-sm-10">
+    <!-- <label for="fieldActivityname" class="col-sm-2 control-label">Activityname</label> -->
+    <div class="col-sm-6">
+      <span class="input-group-btn">
+        <button class="btn btn-info active" type="button" > ชื่อกิจกรรม </button>
         <?php echo $this->tag->textField(["activityname", "size" => 30, "class" => "form-control", "id" => "fieldActivityname"]) ?>
+      </span>
     </div>
 </div>
 
-<div class="form-group">
+<!-- <div class="form-group">
     <label for="fieldActivitydescription" class="col-sm-2 control-label">Activitydescription</label>
     <div class="col-sm-10">
         <?php echo $this->tag->textField(["activitydescription", "size" => 30, "class" => "form-control", "id" => "fieldActivitydescription"]) ?>
     </div>
-</div>
+</div> -->
 
-<div class="form-group">
+<!-- <div class="form-group">
     <label for="fieldActivitydate" class="col-sm-2 control-label">Activitydate</label>
     <div class="col-sm-10">
         <?php echo $this->tag->textField(["activitydate", "type" => "date", "class" => "form-control", "id" => "fieldActivitydate"]) ?>
     </div>
-</div>
+</div> -->
 
 <div class="form-group">
-    <label for="fieldActivityplace" class="col-sm-2 control-label">Activityplace</label>
-    <div class="col-sm-10">
+    <!-- <label for="fieldActivityplace" class="col-sm-2 control-label">สถานที่ทำกิจกรรม</label> -->
+    <div class="col-sm-6">
+      <span class="input-group-btn">
+        <button class="btn btn-info active" type="button" > สถานที่ทำกิจกรรม </button>
         <?php echo $this->tag->textField(["activityplace", "size" => 30, "class" => "form-control", "id" => "fieldActivityplace"]) ?>
     </div>
 </div>
 
-
+</center>
 <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-        <?php echo $this->tag->submitButton(["Search", "class" => "btn btn-default"]) ?>
+        <?php echo $this->tag->submitButton(["Search", "class" => "btn btn-success"]) ?>
     </div>
 </div>
+</center>
+</div>
 
+</div>
+
+</div>
+<br><br><br>
+<hr>
+<footer>
+  <center>
+    Software Engineering  @Walailak University
+  </center>
+  <br>
+</footer>
 <?php echo $this->tag->endForm(); ?>
