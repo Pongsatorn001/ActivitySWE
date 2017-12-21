@@ -41,7 +41,7 @@
 <center>
 <div class="form-group">
     <!-- <label for="fieldActivityid" class="col-sm-2 control-label">Activityid</label> -->
-    <div class="col-sm-6">
+    <div class="col-sm-7">
       <span class="input-group-btn">
         <button class="btn btn-info active" type="button"> รหัสกิจกรรม </button>
         <?php echo $this->tag->textField(["activityid","size" => 50, "type" => "number", "class" => "form-control", "id" => "fieldActivityid"]) ?>
@@ -51,7 +51,7 @@
 
 <div class="form-group">
     <!-- <label for="fieldActivityname" class="col-sm-2 control-label">Activityname</label> -->
-    <div class="col-sm-6">
+    <div class="col-sm-7">
       <span class="input-group-btn">
         <button class="btn btn-info active" type="button" > ชื่อกิจกรรม </button>
         <?php echo $this->tag->textField(["activityname", "size" => 30, "class" => "form-control", "id" => "fieldActivityname"]) ?>
@@ -75,17 +75,18 @@
 
 <div class="form-group">
     <!-- <label for="fieldActivityplace" class="col-sm-2 control-label">สถานที่ทำกิจกรรม</label> -->
-    <div class="col-sm-6">
+    <div class="col-sm-7">
       <span class="input-group-btn">
         <button class="btn btn-info active" type="button" > สถานที่ทำกิจกรรม </button>
         <?php echo $this->tag->textField(["activityplace", "size" => 30, "class" => "form-control", "id" => "fieldActivityplace"]) ?>
+
     </div>
 </div>
 
 </center>
 <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-        <?php echo $this->tag->submitButton(["Search", "class" => "btn btn-success"]) ?>
+    <div class="col-sm-offset-4 col-sm-10">
+        <?php echo $this->tag->submitButton(["ค้นหา", "class" => "btn btn-success"]) ?>
     </div>
 </div>
 </center>
@@ -94,7 +95,7 @@
 </div>
 
 </div>
-<br><br><br>
+<br><br>
 <hr>
 <footer>
   <center>

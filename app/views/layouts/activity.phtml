@@ -20,10 +20,11 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <!-- <a href="<?=$this->url->get("activity/index"); ?>"> หน้าหลัก <span class="sr-only">(current)</span></a> -->
-        <a class="nav-link" href="activity/index">หน้าหลัก <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?=$this->url->get("activity/index"); ?>">หน้าหลัก <span class="sr-only">(current)</span></a>
       </li>
+
       <li class="nav-item">
-        <a class="nav-link" href="activity/new">เพิ่มนักศึกษา</a>
+        <a class="nav-link" href="<?=$this->url->get("activity/new"); ?>">เพิ่มนักศึกษา</a>
       </li>
 
       <!-- <li class="nav-item dropdown">
