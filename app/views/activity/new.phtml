@@ -6,65 +6,105 @@
 <head>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
-<div class="row">
-    <nav>
-        <ul class="pager">
-            <li class="previous"><?php echo $this->tag->linkTo(["activity", "Go Back"]) ?></li>
-        </ul>
-    </nav>
-</div>
-
+<br><br>
 <div class="page-header">
-    <h1>
-        Create activity
-    </h1>
-</div>
 
-<?php echo $this->getContent(); ?>
-
-<?php
-    echo $this->tag->form(
-        [
-            "activity/create",
-            "autocomplete" => "off",
-            "class" => "form-horizontal"
-        ]
-    );
-?>
-
-<div class="form-group">
-    <label for="fieldActivityname" class="col-sm-2 control-label">Activityname</label>
-    <div class="col-sm-10">
-        <?php echo $this->tag->textField(["activityname", "size" => 30, "class" => "form-control", "id" => "fieldActivityname"]) ?>
+    <div class="container">
+      <center>
+      <h1 class="display-4"><img src="https://image.flaticon.com/icons/svg/552/552267.svg" class="img-fluid" alt="Responsive image" width="80"> &nbsp; <strong>เพิ่มกิจกรรมนักศึกษา</strong></h1>
+      <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+    </center>
     </div>
 </div>
+<div class="container">
+<br>
+<hr>
 
-<div class="form-group">
-    <label for="fieldActivitydescription" class="col-sm-2 control-label">Activitydescription</label>
-    <div class="col-sm-10">
-        <?php echo $this->tag->textField(["activitydescription", "size" => 30, "class" => "form-control", "id" => "fieldActivitydescription"]) ?>
+<center>
+<br><br>
+    <!-- <div class="form-group">
+        <label for="fieldActivityname" class="col-sm-2 control-label">Activityname</label>
+        <div class="col-sm-10">
+            <?php echo $this->tag->textField(["activityname", "size" => 30, "class" => "form-control", "id" => "fieldActivityname"]) ?>
+        </div>
+    </div> -->
+
+    <div class="form-group">
+        <!-- <label for="fieldActivityid" class="col-sm-2 control-label">Activityid</label> -->
+        <div class="col-sm-7">
+        <span class="input-group-btn">
+            <button class="btn btn-info active" type="button"> ชื่อกิจกรรม </button>
+            <?php echo $this->tag->textField(["activityname", "size" => 30, "class" => "form-control", "id" => "fieldActivityname"]) ?>
+        </span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <!-- <label for="fieldActivityid" class="col-sm-2 control-label">Activityid</label> -->
+        <div class="col-sm-7">
+        <span class="input-group-btn">
+            <button class="btn btn-info active" type="button"> คำอธิบายกิจกรรม </button>
+            <?php echo $this->tag->textField(["activitydescription", "size" => 30, "class" => "form-control", "id" => "fieldActivitydescription"]) ?>
+        </span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <!-- <label for="fieldActivityid" class="col-sm-2 control-label">Activityid</label> -->
+        <div class="col-sm-7">
+        <span class="input-group-btn">
+            <button class="btn btn-info active" type="button"> วันที่ทำกิจกรรม </button>
+            <?php echo $this->tag->textField(["activitydate", "type" => "date", "class" => "form-control", "id" => "fieldActivitydate"]) ?>
+        </span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <!-- <label for="fieldActivityid" class="col-sm-2 control-label">Activityid</label> -->
+        <div class="col-sm-7">
+        <span class="input-group-btn">
+            <button class="btn btn-info active" type="button"> สถานที่ทำกิจกรรม </button>
+            <?php echo $this->tag->textField(["activityplace", "size" => 30, "class" => "form-control", "id" => "fieldActivityplace"]) ?>
+        </span>
+        </div>
+    </div>
+
+    <!-- <div class="form-group">
+        <label for="fieldActivitydescription" class="col-sm-2 control-label">Activitydescription</label>
+        <div class="col-sm-10">
+            <?php echo $this->tag->textField(["activitydescription", "size" => 30, "class" => "form-control", "id" => "fieldActivitydescription"]) ?>
+        </div>
+    </div> -->
+
+    <!-- <div class="form-group">
+        <label for="fieldActivitydate" class="col-sm-2 control-label">Activitydate</label>
+        <div class="col-sm-10">
+            <?php echo $this->tag->textField(["activitydate", "type" => "date", "class" => "form-control", "id" => "fieldActivitydate"]) ?>
+        </div>
+    </div> -->
+
+    <!-- <div class="form-group">
+        <label for="fieldActivityplace" class="col-sm-2 control-label">Activityplace</label>
+        <div class="col-sm-10">
+            <?php echo $this->tag->textField(["activityplace", "size" => 30, "class" => "form-control", "id" => "fieldActivityplace"]) ?>
+        </div>
+    </div> -->
+
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <?php echo $this->tag->submitButton(["Save", "class" => "btn btn-success"]) ?>
+        </div>
     </div>
 </div>
+</center>
+<br>
+<hr>
 
-<div class="form-group">
-    <label for="fieldActivitydate" class="col-sm-2 control-label">Activitydate</label>
-    <div class="col-sm-10">
-        <?php echo $this->tag->textField(["activitydate", "type" => "date", "class" => "form-control", "id" => "fieldActivitydate"]) ?>
-    </div>
-</div>
-
-<div class="form-group">
-    <label for="fieldActivityplace" class="col-sm-2 control-label">Activityplace</label>
-    <div class="col-sm-10">
-        <?php echo $this->tag->textField(["activityplace", "size" => 30, "class" => "form-control", "id" => "fieldActivityplace"]) ?>
-    </div>
-</div>
-
-
-<div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-        <?php echo $this->tag->submitButton(["Save", "class" => "btn btn-default"]) ?>
-    </div>
-</div>
-
+<footer>
+  <center>
+    Software Engineering  @Walailak University
+  </center>
+  <br>
+</footer>
 <?php echo $this->tag->endForm(); ?>
